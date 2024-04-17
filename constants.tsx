@@ -472,3 +472,5 @@ export function getButtonClasses(style: ButtonType) {
 
   return allButtonClasses;
 }
+
+export const SITE_ID = "welldecocamp";

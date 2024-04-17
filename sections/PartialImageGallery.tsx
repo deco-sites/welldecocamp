@@ -11,15 +11,19 @@ const PartialImageGallery = (props: Props) => {
   const visibleImages = [...props.images].splice(0, props.visibleImages);
 
   return (
-    <div>
-      {visibleImages.map((item) => <img src={item} />)}
-      {visibleImages.length !== props.images.length && <button
-        {...usePartialSection<Props>({
-          props: { visibleImages: props.visibleImages + 1 },
-        })}
-      >
-        +
-      </button>}
+    <div class="flex flex-col mx-auto gap-2 mt-8 max-w-3xl">
+      {visibleImages.map((item) => (
+        <img class="hover:scale-125 transition" src={item} />
+      ))}
+      {visibleImages.length !== props.images.length && (
+        <button
+          {...usePartialSection<Props>({
+            props: { visibleImages: props.visibleImages + 1 },
+          })}
+        >
+          +
+        </button>
+      )}
     </div>
   );
 };

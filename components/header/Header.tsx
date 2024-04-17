@@ -40,6 +40,7 @@ export interface Props {
   logoPosition?: "left" | "center";
 
   buttons?: Buttons;
+  totalVotes: number;
 }
 
 function Header({
@@ -77,6 +78,7 @@ function Header({
   logoPosition = "center",
   buttons,
   device,
+  totalVotes,
 }: SectionProps<typeof loader>) {
   const platform = usePlatform();
   const items = navItems ?? [];
@@ -98,6 +100,7 @@ function Header({
               logo={logo}
               logoPosition={logoPosition}
               buttons={buttons}
+              totalVotes={totalVotes}
             />
           </div>
         </Drawers>
@@ -106,8 +109,10 @@ function Header({
   );
 }
 
-export const loader = (props: Props, _req: Request, ctx: AppContext) => {
-  return { ...props, device: ctx.device };
+export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
+  const votes: { total: number } | null = await ctx
+    .invoke["deco-sites/welldecocamp"].loaders.votes["get-votes"]();
+  return { ...props, device: ctx.device, totalVotes: votes?.total || 0 };
 };
 
 export default Header;
