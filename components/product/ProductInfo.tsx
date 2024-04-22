@@ -209,7 +209,7 @@ function ProductInfo({ page, layout }: Props) {
           },
         }}
       />
-    <HorizontalProductCard product={product} totalVotes={0}/>
+      <HorizontalProductCard product={product} totalVotes={0} />
     </div>
   );
 }

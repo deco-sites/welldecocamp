@@ -85,7 +85,7 @@ function ProductShelf({
                 slideMobile[layout?.numberOfSliders?.mobile ?? 1],
               )}
             >
-              <HorizontalProductCard 
+              <HorizontalProductCard
                 product={product}
                 totalVotes={0}
               />

@@ -8,6 +8,7 @@ import { Format } from "../../components/search/SearchResult.tsx";
 import Spinner from "../../components/ui/Spinner.tsx";
 import ShowMore from "../../islands/ShowMore.tsx";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
+import HorizontalProductCard from "deco-sites/welldecocamp/components/product/HorizontalProductCard.tsx";
 
 export interface Columns {
   mobile?: 1 | 2;
@@ -66,14 +67,11 @@ function ProductGallery(
         </Head>
       )}
 
-      {products?.map((product, index) => (
-        <ProductCard
-          key={`product-card-${product.productID}`}
+      {products?.map((product) => (
+        <HorizontalProductCard
           product={product}
-          preload={index === 0}
-          index={offset + index}
-          layout={layout?.card}
-          platform={platform}
+          totalVotes={0}
+          key={product.productID}
         />
       ))}
 

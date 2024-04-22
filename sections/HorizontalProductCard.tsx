@@ -2,8 +2,8 @@ import type { Product } from "apps/commerce/types.ts";
 import AddToCartButtonVTEX from "deco-sites/welldecocamp/islands/AddToCartButton/vtex.tsx";
 import { formatPrice } from "deco-sites/welldecocamp/sdk/format.ts";
 import { AppContext } from "deco/mod.ts";
-import Component from 'deco-sites/welldecocamp/components/product/HorizontalProductCard.tsx';
-import type {Props as HorizontalProductCardProps} from 'deco-sites/welldecocamp/components/product/HorizontalProductCard.tsx';
+import Component from "deco-sites/welldecocamp/components/product/HorizontalProductCard.tsx";
+import type { Props as HorizontalProductCardProps } from "deco-sites/welldecocamp/components/product/HorizontalProductCard.tsx";
 import { SectionProps } from "deco/types.ts";
 
 export interface Props {
@@ -21,7 +21,7 @@ export async function loader(
 }
 
 const HorizontalProductCard = (props: SectionProps<typeof loader>) => {
-  return <Component {...props}/>
+  return <Component {...props} />;
 };
 
 export function LoadingFallback() {
