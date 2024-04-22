@@ -1,4 +1,3 @@
-import { AppContext } from "deco/mod.ts";
 import { SITE_ID } from "deco-sites/welldecocamp/constants.tsx";
 
 export interface Props {
@@ -12,8 +11,7 @@ export type Res = {
 
 const action = async (
   props: Props,
-  req: Request,
-  ctx: AppContext,
+  _req: Request,
 ): Promise<Res | null> => {
   const { productId } = props;
 

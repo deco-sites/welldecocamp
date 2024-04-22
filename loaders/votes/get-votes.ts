@@ -1,10 +1,10 @@
 import { SITE_ID } from "deco-sites/welldecocamp/constants.tsx";
 
-export type Res = {
+export type TotalVotes = {
   total: number;
 };
 
-const loader = async (): Promise<Res | null> => {
+const loader = async (): Promise<TotalVotes | null> => {
   const controller = new AbortController();
   const signal = controller.signal;
 
@@ -17,7 +17,6 @@ const loader = async (): Promise<Res | null> => {
       },
     });
     const tratedResponse = await res.json();
-    console.log(tratedResponse);
     return tratedResponse;
   } catch (err) {
     console.error(err);

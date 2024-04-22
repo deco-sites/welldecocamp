@@ -1,12 +1,12 @@
 import { SITE_ID } from "deco-sites/welldecocamp/constants.tsx";
 
-export interface Props {
-  productId: string;
-}
-
 export type Res = {
   product: number;
 };
+
+export interface Props {
+  productId: string;
+}
 
 const loader = async (props: Props): Promise<Res | null> => {
   const { productId } = props;

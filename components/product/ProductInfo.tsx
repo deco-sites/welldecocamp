@@ -17,6 +17,7 @@ import { usePlatform } from "../../sdk/usePlatform.tsx";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductSelector from "./ProductVariantSelector.tsx";
+import HorizontalProductCard from "deco-sites/welldecocamp/components/product/HorizontalProductCard.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -208,6 +209,7 @@ function ProductInfo({ page, layout }: Props) {
           },
         }}
       />
+    <HorizontalProductCard product={product} totalVotes={0}/>
     </div>
   );
 }

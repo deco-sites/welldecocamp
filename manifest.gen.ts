@@ -11,6 +11,7 @@ import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
 import * as $$$4 from "./loaders/votes/get-product-votes.ts";
 import * as $$$5 from "./loaders/votes/get-votes.ts";
+import * as $$$$$$$0 from "./matchers/utm.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -131,6 +132,9 @@ const manifest = {
     "deco-sites/welldecocamp/sections/Social/InstagramPosts.tsx": $$$$$$48,
     "deco-sites/welldecocamp/sections/Social/WhatsApp.tsx": $$$$$$49,
     "deco-sites/welldecocamp/sections/Theme/Theme.tsx": $$$$$$50,
+  },
+  "matchers": {
+    "deco-sites/welldecocamp/matchers/utm.ts": $$$$$$$0,
   },
   "actions": {
     "deco-sites/welldecocamp/actions/votes/increment-votes.ts": $$$$$$$$$0,
