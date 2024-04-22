@@ -15,8 +15,15 @@ const action = async (
 ): Promise<Res | null> => {
   const { productId } = props;
 
+
+
+  const controller = new AbortController();
+  const signal = controller.signal;
+
+
   try {
     const res = await fetch("https://camp-api.deco.cx/event", {
+      signal,
       body: JSON.stringify({ productId }),
       method: "POST",
       headers: {
